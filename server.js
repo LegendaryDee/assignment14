@@ -6,7 +6,7 @@ app.get("/",(req,res)=>{
     res.sendFile(__dirname + "/index.html");
 });
  
-app.get("/api/animals", (req,res)=>{
+app.get("/api/crafts", (req,res)=>{
     console.log("Someone is requesting our api");
     const crafts = [];
       crafts[0] = {
