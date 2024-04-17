@@ -19,16 +19,31 @@ const showCrafts = async() => {
     //now loop through the json
     craftsJSON.forEach((craft)=>{
         const section = document.createElement("section");
-        animalsDiv.append(section);
+        section.className ="w3-col l3 m6 w3-margin-bottom";
 
-        const h3 = document.createElement("h3");
-        h3.innerHTML = animal.name;
-        section.append(h3);
+        const divCard = document.createElement("div");
+        divCard.className = "w3-display-container w3-border";
+        section.appendChild(divCard);
 
         const img = document.createElement("img");
-        img.src = "http://localhost:3000/" + craft.img;
-        section.append(img);
+        img.src = "http://localhost:3000/api/crafts/images";
+        img.style= "width:100%";
+        divCard.appendChild(img);
+
+        const divOverlay = document.createElement("div");
+        divCard.className = "w3-display-middle w3-display-hover w3-xlarge w3-text-white";
+        divCard.appendChild(divOverlay);
+
+        const name = document.createElement("p");
+        name.textContent = craft.name;
+        divOverlay.appendChild(name);
+
+        divCard.onclick = () => {
+          alert("Description: " +craft.description);
+        };
+
+        craftsDiv.appendChild(section);
     });
-};
+  };
 
 showCrafts();

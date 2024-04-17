@@ -4,12 +4,37 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    
 </head>
 
 <body>
-    <h1>Buy and Sell Crafts +</h1>
-    <div id="crafts-div"></div>
+    <h1>Buy and Sell Crafts </h1>
+    <button id="plus-btn">
+      <h1><strong>+</strong></h1>
+    </button>
+    <div class="container">
+<div class="photo-gallery" class="transparent hidden">
+    <div class="column">
+      <div class="photo">
+      <div id="crafts-div" class="w3-row-padding"></div>
+    </div>
+    </div> 
+  </div>
+  
+  </div>
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
+
+    <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
+    </div>
+  </div>
+
+
     <script src="script.js"></script>
 </body>
 
