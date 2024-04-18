@@ -47,36 +47,11 @@ const showCrafts = async() => {
         }
         };
 
-    // // now loop through the json
-    // craftsJSON.forEach((craft)=>{
-    //     const section = document.createElement("section");
-    //     section.className ="w3-col l3 m6 w3-margin-bottom";
+ 
+    showCrafts(); 
 
-    //     const divCard = document.createElement("div");
-    //     divCard.className = "w3-display-container w3-border";
-    //     section.appendChild(divCard);
+   
 
-    //     const img = document.createElement("img");
-    //     img.src = craft.image;
-    //     img.style= "width:100%";
-    //     divCard.appendChild(img);
-
-    //     const divOverlay = document.createElement("div");
-    //     divCard.className = "w3-display-middle w3-display-hover w3-xlarge w3-text-white";
-    //     divCard.appendChild(divOverlay);
-
-    //     const name = document.createElement("p");
-    //     name.textContent = craft.name;
-    //     divOverlay.appendChild(name);
-
-    //     divCard.onclick = () => {
-    //       alert("Description: " +craft.description);
-    //     };
-
-    //     craftsDiv.appendChild(section);
-        
-        
-    // });
   
+    
 
-showCrafts();
