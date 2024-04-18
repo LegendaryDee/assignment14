@@ -21,19 +21,30 @@ const showCrafts = async() => {
         const column03 = document.getElementById("column03");
         const column04 = document.getElementById("column04");
 
-        for(int i=0; i< crafts.length(); i++){
+        for(let i=0; i< crafts.length; i++){
           const section = document.createElement("section");
 
-          const title = document.createElement("h3");
-          title.innerHTML= crafts[i].name;
+         
 
           const img = document.createElement("img");
-          img.src = crafts[i].image;
+          img.src = crafts[i].img;
 
-          section.append(title);
           section.append(img);
 
-          `column{i%4}`.append(section);
+        //   `column{i%4}`.append(section);
+
+        if (i%4 == 0) 
+        {
+            column01.append(section);
+        } else if (i%4 == 1) {
+            column02.append(section);
+        } else if (i%4 == 2) {
+            column03.append(section);
+        }
+        else if (i%4 == 3) {
+            column04.append(section);
+        }
+        }
         };
 
     // // now loop through the json
@@ -66,6 +77,6 @@ const showCrafts = async() => {
         
         
     // });
-  };
+  
 
 showCrafts();
