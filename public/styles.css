@@ -1,46 +1,95 @@
-h1 {
-    color: blueviolet;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
+header {
   
-  .flex-item-left {
-    flex: 50%;
-  }
+  color: blue;
+  padding: 20px;
   
-  .flex-item-right {
-    flex: 50%;
-  }
+}
 
-  /* The Modal (background) */
-/* The Modal (background) */
+#crafts-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.craft-card {
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  /* margin: 10px; */
+  padding: 5px;
+  max-width: 300px;
+}
+
+.craft-card img {
+  max-width: 100%;
+}
+
+.craft-card h2 {
+  margin-top: 0;
+}
+
+.craft-card p {
+  margin-top: 0;
+}
+
+.craft-card ul {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.craft-card li {
+  list-style-type: disc;
+}
+
+/* Flex container */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-item-left {
+  flex: 50%; 
+}
+
+.flex-item-right {
+  flex: 50%; 
+}
+
+/* The Modal */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
-
-/* Modal Content */
 .modal-content {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  display: flex; 
 }
 
-/* The Close Button */
+/* (Image) */
+.modal-left {
+  flex: 1; 
+}
+
+.modal-right {
+  flex: 2; 
+}
 .close {
   color: #aaaaaa;
   float: right;
@@ -54,49 +103,13 @@ h1 {
   text-decoration: none;
   cursor: pointer;
 }
-  
-  .column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+@media (max-width: 600px) {
+  .craft-card {
+    max-width: 100%;
   }
-  
-  .photo img {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    object-fit: cover;
+  .flex-item-right, 
+  .flex-item-left {
+    flex: 100%; 
   }
-   
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-  }
-
-
-  
-  .photo-gallery{
-    display: flex;
-    gap: 20px;
-  }
-
-  .column img {
-    width: 100%;
-    margin: 5px;
-    padding: 5px;
-  }
-
-
-
-  
-  /* Responsive layout - makes a one column layout instead of a two-column layout */
-  @media (min-width: 800px) {
-   .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-   }
-   .column{
-    flex: 1;
-   }
 }
